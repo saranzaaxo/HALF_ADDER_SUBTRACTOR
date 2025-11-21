@@ -62,7 +62,16 @@ module half_adder (
     assign carry = a & b;   // AND for carry
 
 endmodule
+module half_subtractor (
+    input  wire a, b,         // Inputs
+    output wire diff, borrow  // Outputs
+);
 
+    // Logic equations
+    assign diff   = a ^ b;     // XOR for difference
+    assign borrow = ~a & b;    // Borrow when a < b
+
+endmodule
 ```
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
@@ -71,8 +80,10 @@ Developed by:SARANRAJ R RegisterNumber:25015887
 
 **RTL Schematic**
 <img width="814" height="350" alt="image" src="https://github.com/user-attachments/assets/46d54164-e111-453f-a442-bf3602afbd3e" />
+<img width="1094" height="484" alt="Screenshot 2025-11-21 134508" src="https://github.com/user-attachments/assets/f8a61805-9414-4212-9b3c-0cfbfc231bbc" />
 
 **Output/TIMING Waveform**
 <img width="941" height="536" alt="image" src="https://github.com/user-attachments/assets/91ab5b0c-9098-4e43-8c92-ae67e46a2e31" />
+<img width="1917" height="921" alt="Screenshot 2025-11-19 133808" src="https://github.com/user-attachments/assets/35d320a5-775b-47eb-8296-e290c2b3749a" />
 
 **Result:**
